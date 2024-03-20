@@ -45,7 +45,7 @@ const About = ({data, skills}) => {
                 <ul>
                   {skills?.toReversed().map((skill, index) => (
                     <li>
-                      <div className="list_inner">
+                      <div key={index} className="list_inner">
                         <div
                           className="progress_inner skillsInner___"
                           data-value={skill.percentage}
