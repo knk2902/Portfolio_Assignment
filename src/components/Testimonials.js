@@ -116,9 +116,8 @@ const Testimonials = ({ data }) => {
                         ))}
                       </ul>
                       {data?.map((testimonial, index) => (
-                        <ul className="job">
+                        <ul className="job" key={index}>
                           <li
-                            key={index}
                             className={activeImg(testimonial.position, "job")}
                             data-index={index + 1}
                           >
