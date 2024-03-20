@@ -84,7 +84,7 @@ const Testimonials = ({ data }) => {
                 </div>
                 <div className="details">
                   <div className="infos">
-                    <div className="avatars" s>
+                    <div className="avatars">
                       <ul className="grid-sort">
                         {reviewData?.current?.map((review, i) => (
                           <li className={` grid-item ${i}`} key={i}>
@@ -107,6 +107,7 @@ const Testimonials = ({ data }) => {
                       <ul className="name">
                         {data?.map((testimonial, index) => (
                           <li
+                            key={index}
                             className={activeImg(testimonial.name, "name")}
                             data-index={index + 1}
                           >
@@ -114,16 +115,17 @@ const Testimonials = ({ data }) => {
                           </li>
                         ))}
                       </ul>
-                        {data?.map((testimonial, index) => (
-                      <ul className="job">
+                      {data?.map((testimonial, index) => (
+                        <ul className="job">
                           <li
+                            key={index}
                             className={activeImg(testimonial.position, "job")}
                             data-index={index + 1}
                           >
                             <span>{testimonial.position}</span>
                           </li>
-                      </ul>
-                        ))}
+                        </ul>
+                      ))}
                     </div>
                   </div>
                 </div>

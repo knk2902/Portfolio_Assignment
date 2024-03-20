@@ -81,7 +81,7 @@ const Contact = ({data, email}) => {
                 <div className="social">
                   <ul>
                     {data?.map((social, index) => (
-                      <li>
+                      <li key={index}>
                         <a href={social.url}>
                           <img className="svg" src={social.image.url} alt="" />
                         </a>
