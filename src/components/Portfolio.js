@@ -34,9 +34,9 @@ const Portfolio = ({ data , subTitle}) => {
             </div>
             <div className="portfolio_list wow fadeInUp" data-wow-duration="1s">
               <ul className="gallery_zoom grid">
-                <li className="grid-sizer" />
-                {data?.toReversed().map((project) => (
-                  <li className="grid-item">
+              <li className="grid-sizer" />
+                {data?.toReversed().map((project, index) => (
+                  <li key={index} className="grid-item">
                     <div className="list_inner">
                       <div className="image">
                         <img src={project?.image?.url} alt="" />

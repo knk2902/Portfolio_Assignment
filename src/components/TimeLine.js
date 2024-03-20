@@ -25,7 +25,11 @@ const TimeLine = ({ data, subTitle }) => {
 
                     if (index % 2 == 0) {
                       return (
-                        <li className="wow fadeInUp" data-wow-duration="1s">
+                        <li
+                          key={index}
+                          className="wow fadeInUp"
+                          data-wow-duration="1s"
+                        >
                           <ul className="items">
                             <li>
                               <div className="list_inner">
@@ -70,7 +74,7 @@ const TimeLine = ({ data, subTitle }) => {
                       );
                     } else {
                       return (
-                        <li className="wow fadeInUp" data-wow-duration="1s">
+                        <li key={index} className="wow fadeInUp" data-wow-duration="1s">
                           <ul className="items">
                             <li>
                               <div className="list_inner">

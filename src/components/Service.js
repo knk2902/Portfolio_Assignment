@@ -17,8 +17,8 @@ const Service = ({ data, subTitle }) => {
               </div>
               <div className="service_list">
                 <ul>
-                  {data?.map((service) => (
-                  <li className="wow fadeInUp" data-wow-duration="1s">
+                  {data?.map((service, index) => (
+                  <li key={index} className="wow fadeInUp" data-wow-duration="1s">
                     <div className="list_inner">
                       <img className="svg" src={service.image.url} alt="" />
                       <div className="title">
